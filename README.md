@@ -1,8 +1,8 @@
 # Beitech Backed Project
 
-Spring + REST + Hibernate + Maven
-MySQL DataBase
-Apcahe Tomcat 8.5 is required for hosting the server.
+- Spring + REST + Hibernate + Maven
+- MySQL DataBase
+- Apcahe Tomcat 8.5 is required for hosting the server.
 
 
 `src\main\webapp\WEB-INF\spring-servlet.xml` will have the BD configuration access.
