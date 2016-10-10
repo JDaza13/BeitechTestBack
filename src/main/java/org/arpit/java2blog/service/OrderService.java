@@ -28,8 +28,8 @@ public class OrderService {
 	}
 
 	@Transactional
-	public void addOrder(Order order) {
-		orderDao.addOrder(order);
+	public Order addOrder(Order order) {
+		return orderDao.addOrder(order);		
 	}
 
 	@Transactional

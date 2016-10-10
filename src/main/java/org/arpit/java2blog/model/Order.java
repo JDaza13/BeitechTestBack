@@ -36,6 +36,7 @@ public class Order{
 	}
 	public Order(int i, int customerId, String address, String description, int price, String date, double trm) {
 		super();
+		this.id = i;
 		this.customerId = customerId;
 		this.address = address;
 		this.date = date;
@@ -68,7 +69,7 @@ public class Order{
 	public double getTrm() {
 		return trm;
 	}
-	public void setTrm(int trm) {
+	public void setTrm(double trm) {
 		this.trm = trm;
 	}
 }

@@ -14,33 +14,33 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserProductController {
 	
 	@Autowired
-	UserProductService userUserProductService;
+	UserProductService userProductService;
 	
 	@RequestMapping(value = "/getAllUserProducts", method = RequestMethod.GET, headers = "Accept=application/json")
 	public List<UserProduct> getUserProducts() {
 		
-		List<UserProduct> listOfUserProducts = userUserProductService.getAllUserProducts();
+		List<UserProduct> listOfUserProducts = userProductService.getAllUserProducts();
 		return listOfUserProducts;
 	}
 
 	@RequestMapping(value = "/getUserProduct/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
 	public UserProduct getUserProductById(@PathVariable int id) {
-		return userUserProductService.getUserProduct(id);
+		return userProductService.getUserProduct(id);
 	}
 
 	@RequestMapping(value = "/addUserProduct", method = RequestMethod.POST, headers = "Accept=application/json")
-	public void addUserProduct(@RequestBody UserProduct userUserProduct) {	
-		userUserProductService.addUserProduct(userUserProduct);
+	public void addUserProduct(@RequestBody UserProduct userProduct) {	
+		userProductService.addUserProduct(userProduct);
 		
 	}
 
 	@RequestMapping(value = "/updateUserProduct", method = RequestMethod.PUT, headers = "Accept=application/json")
-	public void updateUserProduct(@RequestBody UserProduct userUserProduct) {
-		userUserProductService.updateUserProduct(userUserProduct);
+	public void updateUserProduct(@RequestBody UserProduct userProduct) {
+		userProductService.updateUserProduct(userProduct);
 	}
 
 	@RequestMapping(value = "/deleteUserProduct/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
 	public void deleteUserProduct(@PathVariable("id") int id) {
-		userUserProductService.deleteUserProduct(id);		
+		userProductService.deleteUserProduct(id);		
 	}	
 }

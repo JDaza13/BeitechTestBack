@@ -34,9 +34,8 @@ public class OrderController {
 	}
 
 	@RequestMapping(value = "/addOrder", method = RequestMethod.POST, headers = "Accept=application/json")
-	public void addOrder(@RequestBody Order order) {	
-		orderService.addOrder(order);
-		
+	public Order addOrder(@RequestBody Order order) {	
+		return orderService.addOrder(order);		
 	}
 
 	@RequestMapping(value = "/updateOrder", method = RequestMethod.PUT, headers = "Accept=application/json")

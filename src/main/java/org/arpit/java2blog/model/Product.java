@@ -49,7 +49,7 @@ public class Product{
 	public int getPrice() {
 		return price;
 	}
-	public void getPrice(int price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 }
